@@ -1,6 +1,9 @@
 const { app, BrowserWindow, ipcMain } = require('electron');
 
 const DecisionCreate = require('./src/decision');
+var { fixtures } = require('./fixtures/fixtures');
+var getFullValues = require('./src/getFullValues');
+
 
 
 app.on('ready', () => {
@@ -15,10 +18,11 @@ app.on('ready', () => {
     );
     mainWindow.loadURL(`file://${__dirname}/src/index.html`);
 });
-
-ipcMain.on('print:value', (event, value) => {
-  var doc = new DecisionCreate(value);
+// console.log(fixtures)
+let data = getFullValues(fixtures);
+// console.log(data)
+ipcMain.on('print:value', (event) => {
+  var doc = new DecisionCreate(data);
   doc.create();
   doc.save();
 });
-

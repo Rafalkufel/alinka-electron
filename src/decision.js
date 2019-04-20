@@ -1,24 +1,29 @@
-//this allows to save the file
 const app = require('electron');
 const dialog = app.dialog;
 const fs = require('fs');
-
-//this changes the file to docx
 const docx = require('docx');
-const { Document, Paragraph, Packer, TextRun } = docx;
 
+const getBlocks = require('./blocks/getblocks');
+
+const { Document, Packer, Paragraph, TextRun} = docx;
+
+// const getFullValues = require('./full_values');
 
 
 class DecisionCreate extends Document {
-  constructor(value) {
+  constructor(data) {
       super();
-      this.value = value
+      this.data = data;
+      this.blocks = getBlocks(this.data);
       this.doc = new Document();
   }
 
   create() {
-      let paragraph = new Paragraph(this.value);
+    console.log(this.blocks)
+    for (var key in this.blocks) {
+      let paragraph = this.blocks[key](this.data);
       this.doc.addParagraph(paragraph);
+    }
   }
 
   save() {
