@@ -9,6 +9,7 @@ const specialEducation = {
     },
     subs: {
         name_row: "(imię/imiona i nazwisko dziecka lub ucznia)",
+        date_of_birth: "(data i  miejsce urodzenia dziecka lub ucznia)",
         pesel_row: "(numer PESEL dziecka lub ucznia, a w przypadku braku numeru PESEL – seria i numer dokumentu potwierdzającego jego tożsamość)",
         address_row: "(adres zamieszkania dziecka lub ucznia)",
         school_row: "(nazwa i adres przedszkola, innej formy wychowania przedszkolnego, szkoły lub ośrodka, o którym mowa w art. 2 pkt 7 ustawy z dnia 14 grudnia 2016 r. – Prawo oświatowe, a w przypadku ucznia – także oznaczenie oddziału w szkole oraz nazwa zawodu#)",

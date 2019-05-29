@@ -1,17 +1,20 @@
 const blocksDefinition = require('./blocksDefinition');
 
-const { 
+const {
+    addressRow,
     cityAndDate,
+    dateAndPlaceOfStudentsBirthRow,
     emptyLine,
     issuedDecision,
     legalBasis,
     nameOfCenterGen,
+    nameOfStudentRow,
     onRequest,
+    peselRow,
     signatureOfCenter,
     stuffOnDecision,
-    subtitle,
-    nameOfStudentRow,
-    title
+    subtitleOfDecision,
+    titleOfDecision,
  } = blocksDefinition;
 
 
@@ -29,21 +32,27 @@ var specialEducationBlocks = [
     cityAndDate,
     signatureOfCenter,
     emptyLine,
-    title,
-    subtitle
+    titleOfDecision,
+    subtitleOfDecision,
+    emptyLine,
+    legalBasis,
+    emptyLine,
+    onRequest,
+    emptyLine,
+    nameOfCenterGen,
+    emptyLine,
+    stuffOnDecision,
+    emptyLine,
+    issuedDecision,
+    emptyLine,
+    nameOfStudentRow,
+    emptyLine,
+    dateAndPlaceOfStudentsBirthRow,
+    emptyLine,
+    peselRow,
+    emptyLine,
+    addressRow,
+    emptyLine,
 ]
-
-
-
-
-// legalBasis,
-// emptyLine,
-// onRequest,
-// emptyLine,
-// nameOfCenterGen,
-// emptyLine,
-// stuffOnDecision,
-// issuedDecision,
-// nameOfStudentRow
 
 module.exports = getBlocks;

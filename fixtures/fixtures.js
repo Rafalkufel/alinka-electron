@@ -3,6 +3,7 @@ var fixtures = {
         firstName: "Enrique",
         lastName: "Johnson",
         pesel: "89121223444",
+        dateOfBirth: "12.12.1989 r.",
         placeOfBirth: "Mszana Dolna",
         addressOfStudent: "Malwowa 12a/22",
         cityOfStudent: "Poznań",
@@ -11,7 +12,7 @@ var fixtures = {
         school: {
             nameOfSchool: "Szkoła Podstawowa nr 1",
             typeOfSchool: "szkoła podstawowa",
-            adresOfSchool: "ul. Ratajczaka 15/19",
+            addressOfSchool: "ul. Ratajczaka 15/19",
             cityOfSchool: "Poznań",
             postCode: "68-488",
             class: "IIIa",
@@ -21,7 +22,7 @@ var fixtures = {
     centerData: {
         centerCity: "Grodzisk Wlkp.",
         centerZipCode: "62-065",
-        centerAdress: "ul. Zbąszyńska 11",
+        centerAddress: "ul. Zbąszyńska 11",
         centerNameNom: "Poradnia Psychologiczno-Pedagogiczna w Grodzisku Wlkp.",
         centerNameGen: "Poradnii Psychologiczno-Pedagogicznej w Grodzisku Wlkp."
     },

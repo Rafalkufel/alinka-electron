@@ -12,15 +12,14 @@ app.on('ready', () => {
         width: 800,
         height: 600,
         webPreferences: {
-          backgroundThrottling: false
+          backgroundThrottling: false,
         }
       }
     );
     mainWindow.loadURL(`file://${__dirname}/src/index.html`);
+    // mainWindow.webContents.openDevTools()
 });
-// console.log(fixtures)
 let data = getFullValues(fixtures);
-// console.log(data)
 ipcMain.on('print:value', (event) => {
   var doc = new DecisionCreate(data);
   doc.create();
